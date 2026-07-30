@@ -25,13 +25,6 @@ const submissionLinks = [
 <template>
   <main class="hero" :style="{ backgroundImage: `url(${heroBackground})` }">
     <div class="hero-overlay">
-      <h1 class="hero-title">
-        Porn<br />
-        Film<br />
-        Festival<br />
-        Amsterdam
-      </h1>
-
       <div class="hero-buttons">
         <a
           v-for="link in submissionLinks"
@@ -69,7 +62,7 @@ const submissionLinks = [
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 4rem;
 }
 
