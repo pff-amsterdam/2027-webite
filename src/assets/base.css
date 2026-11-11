@@ -1,25 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Darker+Grotesque:wght@400;700;900&display=swap');
 
-/* semantic color variables for this project */
+/* Design tokens taken from the Figma file "P*FFA — Website 2027". */
 :root {
-  --color-background: #0d1b3d;
+  --cream: #f6f2e6;
+  --paper: #fdf8ec;
+  --ink: #20201c;
+  --muted: #85857e;
+  --line: #2a2a26;
+
+  --blue: #86b7ef;
+  --yellow: #f9e373;
+  --pink: #f59fbc;
+  --lavender: #c4b4f5;
+  --green: #a6ce76;
+  --orange: #f5743b;
+
+  --font-body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Darker Grotesque', 'Archivo', sans-serif;
+
+  --page-gutter: clamp(16px, 4vw, 56px);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Small, wide, letter-spaced caps used for eyebrows and card labels. */
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
 }
